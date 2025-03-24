@@ -30,7 +30,7 @@
 		& .上へ移動するボタン {
 			position: fixed;
 			top: -10px;
-			right: 0px;
+			right: 100px;
 		}
 		z-index: 100;
 		text-align: center;
