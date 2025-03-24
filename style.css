@@ -221,10 +221,10 @@
 					justify-content: center;
 					gap: 15px;
 					padding: 10px 10px 10px 10px;
-							& .関連記事画像{
-										display: block;
-										width: 30%;
-										}}
+				& .関連記事画像{
+				display: block;
+				width: 30%;
+					}}
 	& .丸ぽち{
 		text-align: center;
 		font-weight: bold;
