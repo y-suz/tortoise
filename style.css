@@ -322,13 +322,13 @@
 	}
 /*** キャラクター ***/
 	& .chara-talk .疑問ちゃん span:before {
-		background-image: url(アセット 4.png);
+		background-image: url(/assets/images/アセット 4.png);
 	}
 	& .chara-talk .疑問ちゃん span:after {
 		content: '疑問ちゃん';
 	}
 	& .chara-talk .先生 span:before {
-		background-image: url(アセット 5.png);
+		background-image: url(/assets/images/アセット 5.png);
 	}
 	& .chara-talk .先生 span:after {
 		content: '先生';
