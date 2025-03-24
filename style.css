@@ -333,12 +333,14 @@
 /*** キャラクター ***/
 	& .chara-talk .疑問ちゃん span:before {
 		background-image: url(アセット 4.png);
+		z-index: 100;
 	}
 	& .chara-talk .疑問ちゃん span:after {
 		content: '疑問ちゃん';
 	}
 	& .chara-talk .先生 span:before {
 		background-image: url(アセット 5.png);
+		z-index: 100;
 	}
 	& .chara-talk .先生 span:after {
 		content: '先生';
@@ -441,12 +443,14 @@
 /*** キャラクター ***/
 	& .chara-talk1 .疑問ちゃん span:before {
 		background-image: url(アセット 4.png);
+		z-index: 100;
 	}
 	& .chara-talk1 .疑問ちゃん span:after {
 		content: '疑問ちゃん';
 	}
 	& .chara-talk1 .先生 span:before {
 		background-image: url(アセット 5.png);
+		z-index: 100;
 	}
 	& .chara-talk1 .先生 span:after {
 		content: '先生';
