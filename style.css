@@ -112,12 +112,14 @@
 /*ーー目次関係ここまでーOKーーーーーーーーーーーーーーーーーーーーーーーーーーーーー	 */
 
 	& .フッター {
+		z-index: 100;
+		width: 100vw;
 		text-align: center;
 		font-weight: bold;
 		font-size: 30px;
 		color: #330066;
 		background-color: #99ccff;
-		width: 100vw;
+		position: fixed;
 		font-family: Darumadrop One, sans-serif;
 		padding: 25px;
 		padding-right: 0;
