@@ -1,0 +1,590 @@
+.全体 {
+	width: 1200px;
+	/* ↓背景を方眼紙のようにした。*/
+	background-image: linear-gradient(0deg, transparent calc(100% - 1px), #def6ff calc(100% - 1px)),
+	linear-gradient(90deg, transparent calc(100% - 1px), #def6ff calc(100% - 1px));
+	background-size: 16px 16px;
+	background-repeat: repeat;
+	background-position: center center;
+	background-color: #f1fbff;
+	border: 1px solid #99ccff;
+	background-repeat: repeat;
+
+	font-family: 'Kiwi Maru', serif;
+
+	
+	/* ------------ヘッダー全体。ここから------------------------------------------	 */
+	& .ヘッダー {
+
+		& .ロゴアイコン {
+			position: fixed;
+			top: 15px;
+			left: 30px;
+			font-size: 5px;
+			text-align: center;
+			background-color: #99ccff;
+			width: 5.1%;
+			border-radius: 30px;
+		}
+
+		& .上へ移動するボタン {
+			position: fixed;
+			top: -10px;
+			right: 50px;
+		}
+		z-index: 100;
+		text-align: center;
+		font-weight: bold;
+		font-size: 30px;
+		color: #330066;
+		background-color: #99ccff;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 1200px;
+		padding: 25px;
+		font-family: Darumadrop One, sans-serif;
+	}
+/* ---------ここまで--------OK--------------------------------------------	 */
+/* ーー目次関係ここからーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー	 */
+	& .l_toc ol {
+		background-color: #f7f6fb;
+		padding-left: 0;
+		list-style: none;
+		counter-reset: section;
+		/*連番リセット*/
+		padding: 20px;
+	}
+
+	& .l_toc li::before {
+		counter-increment: section;
+		content: counters(section, ".") " ";
+		color: #005243;
+	}
+	/*  アシスタントに ！ 出てるけど ； 入れると反応しなくなるから一旦無視  */
+	#tocopen:checked+.toc_container {
+		display: block;
+		padding: 45px;
+		border: 4px solid #a2d7dd;
+	}
+	& .toc_container, .l_toc input[type="checkbox"] {
+		display: none;
+	}
+	/*****目次*****/
+
+	& .l_toc {
+		width: 90%;
+		max-width: 500px;
+		margin: 20px auto;
+		position: relative;
+		top: -10px;
+		left: -310px;
+		color: #a2d7dd;
+	}
+
+	& .l_toc label {
+		background-color: #a2d7dd;
+		padding: 8px;
+		position: absolute;
+		top: -40px;
+		left: 0;
+		color: #203744;
+	}
+
+	& .toc_container {
+		background-color: #a2d7dd;
+		width: 100%;
+		color: #203744;
+	}
+	& .toc_container ol>li {
+		margin: 0px;
+		color: #a2d7dd;
+	}
+
+	& .html {
+		scroll-padding-top: 70px;
+		/* 固定ヘッダの高さ分 */
+	}
+/*ーー目次関係ここまでーOKーーーーーーーーーーーーーーーーーーーーーーーーーーーーー	 */
+
+	& .フッター {
+		text-align: center;
+		font-weight: bold;
+		font-size: 30px;
+		color: #330066;
+		background-color: #99ccff;
+		width: 1200px;
+		font-family: Darumadrop One, sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+/* ----------------------------------- */
+
+	& .メニュー {
+		padding: 10px;
+		border: 4px solid;
+		border-style: solid dotted double groove;
+		color: #000066;
+		display: inline-block;
+		font-size: 16px;
+		margin: 50px;
+	}
+
+	& .見出し {
+		border-left: 6px solid #478384;
+		padding-left: 6px;
+		display: inline-block;
+		color: #203744;
+		font-weight: bold;
+		font-size: 20px;
+		margin: 10px;
+	}
+
+	& .中見出し {
+		color: #203744;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left: 16px;
+	}
+
+	& .小見出し {
+		color: #00ada9;
+		font-weight: bold;
+		font-size: 18px;
+		margin-left: 30px;
+	}
+
+	& .語り {
+		font-size: 20px;
+		color: #000033;
+	}
+
+	& .横並び1 {
+		display: flex;
+		gap: -200px;
+		& .必要なアイテム {
+			display: block;
+			width: 50%;
+			margin: 20px;
+		}
+	}
+	& .ケース選び方 {
+		padding: 10px;
+		border: 4px solid;
+		border-style: solid dotted double groove;
+		color: #000066;
+		display: inline-block;
+		font-size: 16px;
+		margin: 50px;
+	}
+	& .保湿アイテム {
+		padding: 10px;
+		border: 4px solid;
+		border-style: solid dotted double groove;
+		color: #000066;
+		display: inline-block;
+		font-size: 16px;
+		margin: 50px;
+	}
+	& .リクガメ種類 {
+		margin: 0px
+			/*上*/
+			0px
+			/*右*/
+			0px
+			/*下*/
+			50px
+			/*左*/
+		;
+	}
+	& .文章>span {
+		background: linear-gradient(transparent 0%, transparent 50%,
+				#ffffcc 50%, #ff99cc 80%);
+	}
+
+	& .温度目安 {
+		padding: 10px;
+		border: 4px solid;
+		border-style: solid dotted double groove;
+		color: #000066;
+		display: inline-block;
+		font-size: 16px;
+		margin: 50px;
+	}
+
+	& .サムネ {
+					display: flex;
+					justify-content: center;
+					gap: 15px;
+					padding: 10px 10px 10px 10px;
+							& .関連記事画像{
+										display: block;
+										width: 30%;
+										}}
+	& .丸ぽち{
+		text-align: center;
+		font-weight: bold;
+		color: #000066;	
+		font-size: 25px;
+	}
+	
+	
+	/* ーー会話ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー	 */
+	& .chara-talk {
+		margin: 50px 0;
+		padding: 0;
+		list-style: none;
+		/* ・ ・ ・を消した	 */
+	}
+	/* 吹き出し全般 */
+	& .chara-talk li {
+		width: 35%;
+		margin-left: 150px;
+		padding: 15px;
+		background-color: #f3f6f9;
+		border: solid 2px #c3d2de;
+		border-radius: 7px;
+		box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.2);
+		position: relative;
+	}
+	/* ↓吹き出しの四角のところ	 */
+	& .chara-talk li:nth-child(2n) {
+		background-color: #fff9f1;
+		border: solid 2px #ffddaa;
+	}
+	/* ↓吹き出し同士の間隔	 */
+	& .chara-talk li+li {
+		margin-top: 30px;
+	}
+	& .chara-talk li:empty {
+		margin: 0;
+		padding: 0;
+		height: 0;
+	}
+	/* ↓吹き出しの三角のところ 	 */
+	& .chara-talk li:before {
+		position: absolute;
+		top: 19px;
+		left: -7px;
+		width: 10px;
+		height: 10px;
+		margin: auto;
+		background-color: #f3f6f9;
+		border-top: 2px solid #c3d2de;
+		border-right: 2px solid #c3d2de;
+		-webkit-transform: rotate(-135deg);
+		-moz-transform: rotate(-135deg);
+		-ms-transform: rotate(-135deg);
+		-o-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+		content: '';
+	}
+	/* 吹き出しの三角の先生の方の色	 */
+	& .chara-talk li:nth-child(2n):before {
+		background-color: #fff9f1;
+		border-top: 2px solid #ffddaa;
+		border-right: 2px solid #ffddaa;
+	}
+	/* キャラのアイコンと名称の位置 */
+	& .chara-talk li span {
+		display: block;
+		position: absolute;
+		top: -5px;
+		left: -78px;
+		width: 50px;
+		height: 50px;
+	}
+	/* キャラアイコンの丸	 */
+	& .chara-talk li span:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 50px;
+		height: 50px;
+		border: solid 2px #555;
+		border-radius: 50%;
+		overflow: hidden;
+		background: no-repeat center center;
+		background-size: 54px 66px;
+		content: '';
+	}
+/* アイコン下のキャラの名称	 */
+	& .chara-talk li span:after {
+		display: block;
+		position: absolute;
+		bottom: -22px;
+		left: 0;
+		right: 0;
+		margin: 0 -10px;
+		font-size: 11px;
+		text-align: center;
+	}
+/*** キャラクター ***/
+	& .chara-talk .疑問ちゃん span:before {
+		background-image: url(/assets/images/アセット 4.png);
+	}
+	& .chara-talk .疑問ちゃん span:after {
+		content: '疑問ちゃん';
+	}
+	& .chara-talk .先生 span:before {
+		background-image: url(/assets/images/アセット 5.png);
+	}
+	& .chara-talk .先生 span:after {
+		content: '先生';
+	}
+/*ーーーーーーー--------------------ーーーーーーーーーーーー*/
+		& .chara-talk1 {
+		margin: 50px 0;
+		padding: 0;
+		list-style: none;
+		/* ・ ・ ・を消した	 */
+	}
+
+	/* 吹き出し全般 */
+	& .chara-talk1 li {
+		width: 35%;
+		margin-left: 150px;
+		padding: 15px;
+		background-color: #f3f6f9;
+		border: solid 2px #c3d2de;
+		border-radius: 7px;
+		box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.2);
+		position: relative;
+	}
+
+	/* ↓吹き出しの四角のところ	 */
+	& .chara-talk1 li:nth-child(2n) {
+		background-color: #fff9f1;
+		border: solid 2px #ffddaa;
+	}
+
+	/* ↓吹き出し同士の間隔	 */
+	& .chara-talk1 li+li {
+		margin-top: 30px;
+	}
+
+	& .chara-talk1 li:empty {
+		margin: 0;
+		padding: 0;
+		height: 0;
+	}
+	/* ↓吹き出しの三角のところ 	 */
+	& .chara-talk1 li:before {
+		position: absolute;
+		top: 19px;
+		left: -7px;
+		width: 10px;
+		height: 10px;
+		margin: auto;
+		background-color: #f3f6f9;
+		border-top: 2px solid #c3d2de;
+		border-right: 2px solid #c3d2de;
+		-webkit-transform: rotate(-135deg);
+		-moz-transform: rotate(-135deg);
+		-ms-transform: rotate(-135deg);
+		-o-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+		content: '';
+	}
+	/* 吹き出しの三角の先生の方の色	 */
+	& .chara-talk1 li:nth-child(2n):before {
+		background-color: #fff9f1;
+		border-top: 2px solid #ffddaa;
+		border-right: 2px solid #ffddaa;
+	}
+	/* キャラのアイコンと名称の位置 */
+	& .chara-talk1 li span {
+		display: block;
+		position: absolute;
+		top: -5px;
+		left: -78px;
+		width: 50px;
+		height: 50px;
+	}
+	/* キャラアイコンの丸	 */
+	& .chara-talk1 li span:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		width: 50px;
+		height: 50px;
+		border: solid 2px #555;
+		border-radius: 50%;
+		overflow: hidden;
+		background: no-repeat center center;
+		background-size: 54px 66px;
+		content: '';
+	}
+/* アイコン下のキャラの名称	 */
+	& .chara-talk1 li span:after {
+		display: block;
+		position: absolute;
+		bottom: -22px;
+		left: 0;
+		right: 0;
+		margin: 0 -10px;
+		font-size: 11px;
+		text-align: center;
+	}
+/*** キャラクター ***/
+	& .chara-talk1 .疑問ちゃん span:before {
+		background-image: url(/assets/images/アセット 4.png);
+	}
+	& .chara-talk1 .疑問ちゃん span:after {
+		content: '疑問ちゃん';
+	}
+	& .chara-talk1 .先生 span:before {
+		background-image: url(/assets/images/アセット 5.png);
+	}
+	& .chara-talk1 .先生 span:after {
+		content: '先生';
+	}
+/*-----------------------------------------*/
+.吹き出し画像横並び {
+	display: flex;
+	justify-content: center;
+	gap: 0px;
+
+	& .画像1{
+		border: 1px solid black;
+		position:absolute;
+		width: 10px;
+		top:250px;
+		left: 770px;
+		padding: 10px 10px 10px 10px;
+	}
+	& .chara-talk1{
+		width: 100%;
+		padding: auto;
+	}}
+/*-------------------------------------------------------------*/
+	& .カメ種類1 {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px 10px 10px 10px;
+	
+	& .紹介画像{
+		display: block;
+		width: 100%;
+	}	
+	
+	& .紹介小見出し{
+		font-weight: bold;
+		font-size: 25px;
+		width: 400px;
+		color: #114400;
+	}
+	& .紹介文章{
+		font-size: 14px;
+		width: 320px;
+	}
+	& .ケズメリクガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}
+	& .ホシガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}
+	& .ヘルマンリクガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}	
+	} 
+	
+		& .カメ種類2 {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 10px 10px 10px 10px;
+	
+	& .紹介画像{
+		display: block;
+		width: 100%;
+	}	
+	
+	& .紹介小見出し{
+		font-weight: bold;
+		font-size: 25px;
+		width: 400px;
+		color: #114400;
+	}
+	& .紹介文章{
+		font-size: 14px;
+		width: 300px;
+	}
+	& .アカアシガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}
+	& .ヒョウモンリクガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}
+	& .ギリシャリクガメ{
+		border: 1px solid black;
+		width: 350px;
+		padding: 10px 10px 10px 10px;
+	}	
+	} 
+/*--------------------------------------------*/
+& .カメ種類3 {
+	display: flex;/* 横並び */	
+	justify-content: center;
+	gap: 410px;
+	& .紹介画像{
+		display: block;
+		width: 100%;
+	}		
+	& .紹介小見出し{
+		font-weight: bold;
+		font-size: 25px;
+		width: 400px;
+		color: #114400;
+	}
+	& .紹介文章{
+		font-size: 14px;
+		width: 300px;
+	}
+	& .ブロック2 {	
+		border: 1px solid black;
+		padding: 10px 10px 10px 10px;
+		width: 350px;
+	}}	
+/*----------------------------------------*/
+	
+/* 黒板風見出し	*/
+		@font-face {
+		font-family: 'Darumadrop One', sans-serif;
+		font-family: 'M PLUS 1', sans-serif;
+		font-family: 'Yuji Syuku', serif;
+		font-family: 'Yusei Magic', sans-serif;
+			}
+.kokuban {
+		font-family: 'Darumadrop One', sans-serif;
+		font-family: 'M PLUS 1', sans-serif;
+		font-family: 'Yuji Syuku', serif;
+		font-family: 'Yusei Magic', sans-serif;
+    color: #fff;
+    background-color: #114400;
+    margin: 10px;
+    padding: 15px; /*縦の幅*/
+    border: 9px solid #a60; /*茶色の枠*/
+    border-radius: 3px; /*茶色の枠角*/
+    box-shadow: 2px 2px 4px #666, 2px 2px 2px #111 inset;
+    text-shadow: 0px 0px 2px #000;
+    line-height: 1.9;
+}
+
+/*茶色の枠*/
+	
+	
+}/*全体の終わり  */
